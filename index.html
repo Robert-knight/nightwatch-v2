@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="守夜 — 出门在外，也能看一眼家里。">
+<meta name="theme-color" content="#f8f3ea">
+<title>守夜 — 出门在外，也能看一眼家里</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f8f3ea'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%232b231b' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%232b231b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="12" cy="12" r="3" fill="currentColor"/>
+    </svg>
+    <span class="brand-cn">守夜</span>
+    <span class="brand-en">NIGHTWATCH</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#moments">它能看见</a>
+    <a href="#day">一天</a>
+    <a href="#setup">安装</a>
+    <a href="#pricing">价格</a>
+  </nav>
+  <a href="#top" class="btn btn-soft">看看家里的</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ 1 · 首屏 ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker"><span class="dot"></span>守夜 · 家庭摄像头</p>
+        <h1 class="hero-h1">出门在外，<br>也能看一眼家里。</h1>
+        <p class="hero-sub">客厅、厨房、门口。一个普通的下午，一只睡着的狗。<br>不吵，不提醒，你想起它的时候它在。</p>
+        <div class="hero-actions">
+          <a href="#moments" class="btn btn-solid">看看实时画面</a>
+          <a href="#day" class="btn btn-ghost">它是怎么工作的</a>
+        </div>
+        <p class="hero-meta">已装进 <b>128,904</b> 个家庭 · 打开平均 <b>2</b> 秒</p>
+      </div>
+      <div class="hero-cam">
+        <div class="cam">
+          <canvas id="feed"></canvas>
+          <div class="cam-top">
+            <span class="cam-live"><i></i><span id="cam-name">客厅</span></span>
+            <span class="cam-time" id="cam-time">15:42</span>
+          </div>
+          <div class="cam-bottom">
+            <span class="cam-note">实时</span>
+            <span class="cam-note" id="cam-note">画面有点软，是正常的</span>
+          </div>
+        </div>
+        <div class="cam-tabs" role="tablist">
+          <button class="tab" data-scene="0" role="tab">上午</button>
+          <button class="tab is-on" data-scene="1" role="tab">下午</button>
+          <button class="tab" data-scene="2" role="tab">傍晚</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap hero-foot">
+      <span>已连续工作 <b>412</b> 天</span>
+      <span>画面只在你打开的时候出现</span>
+      <span>本地存储 · 不上传云端</span>
+    </div>
+  </section>
+
+  <!-- ============ 2 · 它能看见 ============ -->
+  <section class="moments" id="moments">
+    <div class="wrap">
+      <p class="kicker"><span class="dot"></span>它今天看见的</p>
+      <h2 class="h2">你错过的，<br>它都替你留着。</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="photo p-kitchen">
+            <span class="ts">11:20</span>
+          </div>
+          <h3>妈今天包了饺子。</h3>
+          <p>她十一点二十开始和面，十二点半下锅。你那边是下午三点，正在开会。</p>
+        </article>
+
+        <article class="card">
+          <div class="photo p-dog">
+            <span class="ts">15:42</span>
+          </div>
+          <h3>它一天要睡十六个小时。</h3>
+          <p>下午三点四十二，它从沙发挪到地毯上。阳光刚好走到那里。</p>
+        </article>
+
+        <article class="card">
+          <div class="photo p-door">
+            <span class="ts">16:20</span>
+          </div>
+          <h3>孩子四点二十到家。</h3>
+          <p>比平时早了十分钟。他进门先喊了一声，没人应，就把书包放在了第二格。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · 一天 ============ -->
+  <section class="day" id="day">
+    <div class="wrap">
+      <p class="kicker"><span class="dot"></span>一天</p>
+      <h2 class="h2">一天很长。<br>你只看见一小段。</h2>
+
+      <div class="strip">
+        <figure class="snap"><div class="photo p-morning"><span class="ts">09:12</span></div><figcaption>早上的光</figcaption></figure>
+        <figure class="snap"><div class="photo p-kitchen"><span class="ts">11:20</span></div><figcaption>饺子</figcaption></figure>
+        <figure class="snap"><div class="photo p-dog"><span class="ts">15:42</span></div><figcaption>它醒了</figcaption></figure>
+        <figure class="snap"><div class="photo p-evening"><span class="ts">19:05</span></div><figcaption>灯还亮着</figcaption></figure>
+      </div>
+
+      <p class="day-note">按时间往回拖，任何一个下午都在那里。<br>守夜只做一件事：让你想起来的时候，能看见。</p>
+    </div>
+  </section>
+
+  <!-- ============ 4 · 三分钟 ============ -->
+  <section class="setup" id="setup">
+    <div class="wrap">
+      <p class="kicker"><span class="dot"></span>三分钟</p>
+      <h2 class="h2">插上电，扫个码。<br>然后你就不用管它了。</h2>
+
+      <ol class="steps">
+        <li>
+          <span class="step-n">01</span>
+          <h3>找个地方</h3>
+          <p>书架、柜顶、电视旁边都行。它自己会调角度，插上电就好，不用布线。</p>
+        </li>
+        <li>
+          <span class="step-n">02</span>
+          <h3>扫一下</h3>
+          <p>手机对着它扫个码，连上你家的 Wi-Fi。整个过程四十秒，不用装驱动。</p>
+        </li>
+        <li>
+          <span class="step-n">03</span>
+          <h3>忘掉它</h3>
+          <p>它会一直工作。你不需要记得它在哪，想起来的时候打开看一眼就好。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 5 · 故事 ============ -->
+  <section class="story">
+    <div class="wrap">
+      <blockquote>
+        你在另一个城市，晚上十点，酒店房间。<br>
+        你打开它，客厅的灯还亮着，狗趴在沙发上。<br>
+        你看了一会儿，把手机放下，睡了。
+      </blockquote>
+      <p class="story-note">这是大多数人用守夜的方式。<br>不是防贼，是看一眼。</p>
+    </div>
+  </section>
+
+  <!-- ============ 6 · 价格 ============ -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <p class="kicker"><span class="dot"></span>价格</p>
+      <h2 class="h2">一台，或者三台。</h2>
+
+      <div class="plans">
+        <article class="plan">
+          <p class="plan-name">守夜 ONE</p>
+          <p class="plan-price">¥399</p>
+          <p class="plan-desc">一台摄像机，一个人住。</p>
+          <ul>
+            <li>1080P · 本地 128G</li>
+            <li>手机随时看</li>
+            <li>双向通话</li>
+          </ul>
+          <a href="#top" class="btn btn-ghost">买一台</a>
+        </article>
+
+        <article class="plan is-featured">
+          <p class="plan-name">守夜 家庭</p>
+          <p class="plan-price">¥899</p>
+          <p class="plan-desc">客厅、门口、阳台，各一台。</p>
+          <ul>
+            <li>三台 · 本地 256G</li>
+            <li>夜视 · 全彩</li>
+            <li>声音和画面双向</li>
+          </ul>
+          <a href="#top" class="btn btn-solid">买一套</a>
+        </article>
+      </div>
+
+      <p class="plan-note">不订阅，不按月收费。录像存在机器里，不上传云端。</p>
+    </div>
+  </section>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+      </svg>
+      <span class="brand-cn">守夜</span>
+      <span class="brand-en">NIGHTWATCH</span>
+    </div>
+    <nav class="foot-links">
+      <a href="#moments">它能看见</a>
+      <a href="#day">一天</a>
+      <a href="#setup">安装</a>
+      <a href="#pricing">价格</a>
+    </nav>
+    <p class="foot-fine">© 2026 守夜科技 · 杭州 · 看一眼就好</p>
+  </div>
+</footer>
+
+  <!-- ============ 7 · 现在 ============ -->
+  <section class="now" id="now">
+    <div class="now-stage">
+      <div class="now-copy">
+        <p class="kicker"><span class="dot"></span>现在</p>
+        <h2 class="h2 now-h2" id="now-h2">你家客厅。<br>现在。</h2>
+        <p class="now-sub" id="now-sub">灯开着。地毯上什么都没有。</p>
+      </div>
+
+      <div class="cam now-cam">
+        <canvas id="feed2"></canvas>
+        <div class="cam-top">
+          <span class="cam-live"><i></i><span>客厅</span></span>
+          <span class="cam-time" id="now-time">19:05</span>
+        </div>
+        <div class="cam-bottom">
+          <span class="cam-note">实时</span>
+          <span class="cam-note" id="now-note">灯已经开了</span>
+        </div>
+      </div>
+
+      <div class="cam-tabs now-tabs" id="now-tabs">
+        <button class="tab is-dim" disabled>上午</button>
+        <button class="tab is-dim" disabled>下午</button>
+        <button class="tab is-on" disabled>傍晚</button>
+        <button class="tab tab-new" id="tab-night" disabled>23:40</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8 · 常见问题 ============ -->
+  <section class="support" id="support">
+    <div class="wrap">
+      <p class="kicker"><span class="dot"></span>常见问题</p>
+      <h2 class="h2">如果你看到<br>不对的地方。</h2>
+
+      <dl class="qa">
+        <div class="qa-row">
+          <dt>画面里好像有个人。</dt>
+          <dd>请先确认那是您认识的人。如果不认识，请继续观察。<span class="qa-dim">多数情况下，那只是您的眼睛。</span></dd>
+        </div>
+        <div class="qa-row">
+          <dt>时间戳对不上。</dt>
+          <dd>设备使用本地时钟。如果时间开始倒退，请不要校准。</dd>
+        </div>
+        <div class="qa-row">
+          <dt>客服几点下班？</dt>
+          <dd>我们不下班。</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <div class="fade-dark" aria-hidden="true"></div>
+
+  <!-- ============ 9 · 终章 ============ -->
+  <section class="finale" id="finale">
+    <div class="fin-stage">
+      <canvas id="feed3" class="fill"></canvas>
+      <div class="fin-veil"></div>
+      <p class="fin-line" id="fin-line"></p>
+      <div class="fin-hit" id="fin-hit"></div>
+      <div class="fin-end" id="fin-end">
+        <p class="fin-end-1">晚安。</p>
+        <p class="fin-end-2">已连续工作 412 天。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+
+<button class="snd" id="snd" hidden>♪&nbsp; 开启声音</button>
+
+<script src="main.js"></script>
+</body>
+</html>
